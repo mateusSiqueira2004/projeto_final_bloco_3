@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+    color: white;
+}
+.CorpoPrincipal{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.CorpoTitulos{
+    width: 80vw;
+    display: flex;
+    flex-Direction: column;
+    align-Items: center;
+}
+.CorpoImagem{
+    width: 80vw;
+    display: flex;
+    flex-Direction: column;
+    align-Items: center;
+}
