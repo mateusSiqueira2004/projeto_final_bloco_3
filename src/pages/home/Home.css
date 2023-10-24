@@ -1,0 +1,59 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+header{
+    background-color: #eef5f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px black solid;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.NavTitulo{
+    margin-left: 10%;
+    text-decoration: underline;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.NavBar{
+    display: flex;
+    margin-right: 30px;
+}
+.NavItens{
+    margin: 2px;
+    padding: 10px;
+    font-size: 20px;
+}
+main{
+    background-color: #eef5f8;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.CorpoTexto{
+    width: 30vw;
+    margin: 30px;
+    display: flex;
+    flex-Direction: column;
+    align-items: center;
+}
+.ButtonHome{
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+    background-color: aqua;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: white 1px solid;
+    border-radius: 10px;
+}
+.CorpoImagem{
+    margin-right: 20vw;
+    display: flex;
+    align-Items: center;
+}
+.imgHome{
+    width: 35vw;
+    height: 35vw;
+}
