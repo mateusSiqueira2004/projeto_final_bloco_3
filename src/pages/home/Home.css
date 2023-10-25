@@ -2,11 +2,12 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 header{
+    width: 98%;
     background-color: #eef5f8;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px black solid;
+    border: 1px black solid;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
@@ -26,15 +27,16 @@ header{
 }
 main{
     background-color: #eef5f8;
-    width: 100vw;
+    width: 98%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    border-left: 1px black solid;
+    border-right: 1px black solid;
 }
 .CorpoTexto{
-    width: 30vw;
-    margin: 30px;
+    width: 40%;
+    margin: 30px 5px;
     display: flex;
     flex-Direction: column;
     align-items: center;
@@ -48,12 +50,36 @@ main{
     border: white 1px solid;
     border-radius: 10px;
 }
+.ButtonHome:hover{
+    background-color: rgb(2, 202, 202);
+}
 .CorpoImagem{
-    margin-right: 20vw;
+    width: 48%;
     display: flex;
     align-Items: center;
 }
 .imgHome{
     width: 35vw;
     height: 35vw;
+}
+footer{
+    background-color: #eef5f8;
+    width: 98%;
+    display: block;
+    flex-wrap: wrap;
+    text-align: center;
+    border: 1px black solid;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+a{
+    text-decoration: none;
+}
+.imglikedin{
+    width: 3%;
+    height: 3%;
+    margin-top: 10px;
+}
+.textoFooter{
+    margin: 2px;
 }
