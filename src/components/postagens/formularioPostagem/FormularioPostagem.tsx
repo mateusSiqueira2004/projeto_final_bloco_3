@@ -90,7 +90,7 @@ function FormularioPostagem() {
             try {
                 await atualizar(`/postagens`, postagem, setPostagem, {
                     headers: {
-                        'Authorization': token,
+                        Authorization: token,
                     },
                 });
 
@@ -107,13 +107,13 @@ function FormularioPostagem() {
 
         } else {
             try {
-                await cadastrar(`/postagens`, postagem, setPostagem, {
+                await cadastrar(`/postagens/cadastrar`, postagem, setPostagem, {
                     headers: {
-                        'Authorization': token
-                    }
+                        Authorization: token,
+                    },
                 })
 
-                alert('Postagem cadastrada com sucesso')
+                alert('Postagem cadastrada com sucesso');
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
@@ -197,7 +197,7 @@ function FormularioPostagem() {
                 </button>
             </form>
         </div>
-)
+    )
 }
 
 export default FormularioPostagem;
