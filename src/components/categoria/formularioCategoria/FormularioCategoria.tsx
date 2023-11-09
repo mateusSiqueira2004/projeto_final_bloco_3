@@ -4,7 +4,7 @@ import { RotatingLines } from "react-loader-spinner";
 
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
 
-
+import { toastAlerta } from '../../../utils/toastAlerta';
 import Categoria from "../../../models/modelCategoria/ModelCategoria";
 
 function FormularioCategoria() {
@@ -21,7 +21,7 @@ function FormularioCategoria() {
         try {
             await buscar(`/categorias/${id}`, setCategoria, {})
         } catch (error: any) {
-            alert('Erro ao buscar categoria')
+            toastAlerta('erro ao buscar categoria', "erro")  
         }
     }
 
@@ -46,10 +46,10 @@ function FormularioCategoria() {
             try {
                 await atualizar(`/categorias`, categoria, setCategoria, {})
 
-                alert('Categoria atualizado com sucesso')
+                toastAlerta('Categoria atualizado com sucesso', "sucesso")
 
             } catch (error: any) {
-               alert('Erro ao atualizar o Categoria')
+                toastAlerta('erro ao atualizar categoria', "erro")  
                 
             }
 
@@ -57,10 +57,10 @@ function FormularioCategoria() {
             try {
                 await cadastrar(`/categorias`, categoria, setCategoria, {})
 
-                alert('Categoria cadastrado com sucesso')
+                toastAlerta('Categoria cadastrado com sucesso', "sucesso")
 
             } catch (error: any) {
-                alert('Erro ao cadastrar o Categoria')
+                toastAlerta('erro ao atualizar categoria', "erro")  
                 
             }
         }

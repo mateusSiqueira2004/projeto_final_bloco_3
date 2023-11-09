@@ -5,6 +5,8 @@ import { buscar } from '../../../services/Service';
 import Categoria from '../../../models/modelCategoria/ModelCategoria';
 import CardCategoria from '../cardCategoria/CardCategoria';
 
+import { toastAlerta } from '../../../utils/toastAlerta';
+
 function ListaCategorias() {
 
     const [categorias, setCategorias] = useState<Categoria[]>([]);
@@ -13,7 +15,7 @@ function ListaCategorias() {
         try {
             await buscar('/categorias', setCategorias, {})
         } catch (error: any) {
-           alert('erro ao buscar categoria')  
+            toastAlerta('erro ao buscar categoria', "erro")  
         }
     }
     useEffect(() => {

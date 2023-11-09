@@ -4,7 +4,7 @@ import { RotatingLines } from "react-loader-spinner"
 
 import { buscar, deletar } from '../../../services/Service'
 
-
+import { toastAlerta } from '../../../utils/toastAlerta';
 import Categoria from '../../../models/modelCategoria/ModelCategoria'
 
 function DeletarCategoria() {
@@ -21,7 +21,7 @@ function DeletarCategoria() {
         try {
             await buscar(`/categorias/${id}`, setCategoria, {})
         } catch (error: any) {
-                alert('erro ao buscar categoria')
+            toastAlerta('erro ao buscar categoria', "erro")
 
         }
     }
@@ -39,10 +39,10 @@ function DeletarCategoria() {
         try {
             await deletar(`/categorias/${id}`, {})
 
-            alert('Categoria apagada com sucesso')
+            toastAlerta('Categoria apagada com sucesso', "sucesso")
 
         } catch (error) {
-            alert('Erro ao apagar a Categoria')
+            toastAlerta('Erro ao apagar a Categoria', "erro")
         }
 
         setIsLoading(false)
