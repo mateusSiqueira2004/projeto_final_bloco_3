@@ -12,7 +12,6 @@ function Navbar() {
                         <Link to='/categorias' className='hover:underline'>Categorias</Link>
 
                     </div>
-
                 </div>
             </div>
         </>

@@ -1,4 +1,5 @@
-
+import ListaCategorias from "../../components/categoria/listaCategoria/ListaCategoria"
+import ModalCategoria from "../../components/categoria/modalCategoria/ModalCategoria"
 
 function Home() {
     return (
@@ -15,7 +16,7 @@ function Home() {
 
                         <div className="flex justify-around gap-4">
                             <div className="flex justify-around gap-4">
-                                
+                            <ModalCategoria />
                             </div>
                         </div>
                     </div>
@@ -30,7 +31,7 @@ function Home() {
                 </div>
             </div>
 
-            
+            <ListaCategorias />
         </>
     )
 }
